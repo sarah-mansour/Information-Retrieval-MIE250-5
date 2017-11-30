@@ -33,7 +33,7 @@ public class TestSearch {
 		
 		// TODO: Here is the solution implementation of all classes -- you will need to unzip the files
 		//       provided on Blackboard and provide the correct path as the argument to FileDocSource.
-		TestIndex(new soln.index.InvertedIndex(new soln.io.FileDocSource("../Part1"), 
+		TestIndex(new soln.index.InvertedIndex(new soln.io.FileDocSource("NSF_Abstracts/Part1/awards_1992"), 
 											   new soln.tokenizer.IndexingTokenizer(), 
 											   new soln.score.TFIDFScoringFun()));
 
@@ -41,9 +41,9 @@ public class TestSearch {
 		//       (Do not rename classes... modulo the issue that you might store your files in a different
 		//        directory which can change, the following code should otherwise work when uncommented once
 		//        your project is complete.)
-//		TestIndex(new index.InvertedIndex(new io.FileDocSource("../Part1"), 
-//				                          new tokenizer.IndexingTokenizer(), 
-//										  new score.TFIDFScoringFun()));
+		TestIndex(new index.InvertedIndex(new io.FileDocSource("NSF_Abstracts/Part1/awards_1992"), 
+				                                                  new tokenizer.IndexingTokenizer(), 
+										  new score.TFIDFScoringFun()));
 	}
 
 	public static void TestIndex(Index s) {
