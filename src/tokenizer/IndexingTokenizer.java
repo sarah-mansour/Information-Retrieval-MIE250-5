@@ -27,7 +27,7 @@ public class IndexingTokenizer implements Tokenizer{
             ArrayList<String> ret = new ArrayList<String>();
             
             //seperate the words but preserve ones with whitespaces
-            Pattern p = Pattern.compile("[\\w-']+");
+            Pattern p = Pattern.compile("\\w[\\w-]*");
             Matcher m = p.matcher(s);
             //find the words and lowercase all the chars
             while (m.find()) {
